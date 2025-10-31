@@ -1,0 +1,18 @@
+{
+  "validUser": {
+    "username": "Admin",
+    "password": "admin123"
+  },
+  "emptyCredentials": {
+    "username": "",
+    "password": ""
+  },
+  "urls": {
+    "baseUrl": "https://opensource-demo.orangehrmlive.com",
+    "loginUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+  },
+  "expectedMessages": {
+    "invalidCredentials": "Invalid credentials",
+    "requiredField": "Required"
+  }
+}

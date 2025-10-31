@@ -1,0 +1,27 @@
+{
+  "name": "dumyautomation",
+  "version": "1.0.0",
+  "description": "Robust Playwright E2E Automation Framework",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:login": "playwright test login.spec.js",
+    "test:dashboard": "playwright test dashboard.spec.js",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install"
+  },
+  "keywords": ["playwright", "automation", "testing", "e2e"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.1"
+  }
+}
