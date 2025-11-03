@@ -3,6 +3,8 @@ test-results/
 playwright-report/
 playwright/.cache/
 screenshots/
+allure-results/
+allure-report/
 .env
 *.log
 .DS_Store

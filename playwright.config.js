@@ -14,18 +14,18 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
+  reporter: [
+    ["html"],
+    ["allure-playwright"]
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-   
-  
     trace: "on",
     headless: true,
     actionTimeout: 10 * 1000, // Max time for each action (click, fill, etc.)
     navigationTimeout: 15 * 1000,
     screenshot: 'only-on-failure', // Capture screenshot on test failure
     video: 'retain-on-failure', // Record video if the test fails
-   
   },
 
   /* Configure projects for major browsers */

@@ -15,6 +15,8 @@
     "test:login": "playwright test login.spec.js",
     "test:dashboard": "playwright test dashboard.spec.js",
     "report": "playwright show-report",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
     "install:browsers": "playwright install"
   },
   "keywords": ["playwright", "automation", "testing", "e2e"],
@@ -22,6 +24,7 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.9.1"
+    "@types/node": "^24.9.1",
+    "allure-playwright": "^3.0.0"
   }
 }
