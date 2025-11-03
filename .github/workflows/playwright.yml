@@ -21,9 +21,14 @@ jobs:
       run: npx playwright install chromium
     - name: Run Playwright tests on Chromium
       run: npx playwright test --project=chromium
-    - name: Generate HTML Report
+    - name: Prepare HTML Report
       if: always()
-      run: npx playwright show-report --host=0.0.0.0
+      run: |
+        if [ -f "playwright-report/index.html" ]; then
+          echo "HTML report generated successfully"
+        else
+          echo "No HTML report found"
+        fi
     - name: Send Email Report
       if: always()
       uses: dawidd6/action-send-mail@v3

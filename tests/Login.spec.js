@@ -10,7 +10,7 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password' }).click();
   await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
   await page.getByRole('button', { name: 'Login' }).click();
-   await page.waitForTimeout(50000);
+   await page.waitForTimeout(10000);
   const Title = await page.title();
 console.log('Page Title', Title );
   await page.getByRole('banner').getByRole('img', { name: 'profile picture' }).click();
