@@ -48,8 +48,16 @@ jobs:
           <p><strong>Branch:</strong> ${{ github.ref_name }}</p>
           <p><strong>Commit:</strong> ${{ github.sha }}</p>
           <p><strong>Run Number:</strong> ${{ github.run_number }}</p>
-          <p>Please find the detailed Allure report in the attachments.</p>
-        attachments: allure-report/index.html
+          <p>Please find the detailed HTML and Allure reports in the attachments.</p>
+        attachments: |
+          playwright-report/index.html
+          allure-report/index.html
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
     - uses: actions/upload-artifact@v4
       if: always()
       with:
