@@ -12,6 +12,7 @@
     "test:chrome": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
+    "test:allure": "cross-env ALLURE=true playwright test",
     "test:login": "playwright test login.spec.js",
     "test:dashboard": "playwright test dashboard.spec.js",
     "report": "playwright show-report",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.9.1",
-    "allure-playwright": "^3.0.0"
+    "allure-playwright": "^3.0.0",
+    "cross-env": "^7.0.3"
   }
 }
